@@ -2,7 +2,7 @@
 {
     public static class ArrayReplicator
     {
-        
+
         public static int[] ReplicateArray(int[] original)
         {
             int size = original.Length;
@@ -17,7 +17,7 @@
         public static int AskForNumber(string text)
         {
             Console.Write(text);
-            string userInput = Console.ReadLine(); 
+            string userInput = Console.ReadLine();
             int number = Convert.ToInt32(userInput);
             return number;
         }
@@ -25,7 +25,7 @@
         public static int AskForNumber(string text, int min, int max)
         {
             int userInput = AskForNumber(text);
-                  // While the user input is inconvenient of the range
+            // While the user input is inconvenient of the range
             while (userInput < min || userInput > max)
             {
                 userInput = AskForNumber("Your previous input is not valid, try again.");
@@ -55,6 +55,8 @@
             // Verify original and replicated array are the same
             for (int index = 0; index < size; ++index)
                 Console.WriteLine($"Original {original[index],-PrintOffset}  {copy[index],4} Copy");
+
+            Console.ReadLine();
         }
     }
 }
